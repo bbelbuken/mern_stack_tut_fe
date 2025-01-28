@@ -6,11 +6,13 @@
       "react-redux",
       "@reduxjs/toolkit",
       "@reduxjs/toolkit/query",
-      "express"  
+      "express",
+      "date-fns",
+      "uuid",
     ]
   },
   "compilerOptions": {
-    "baseUrl": "./lesson1",
+    "baseUrl": "./",  
     "module": "commonjs",
     "target": "es6",
     "jsx": "react",
