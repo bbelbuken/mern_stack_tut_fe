@@ -9,6 +9,10 @@
       "express",
       "date-fns",
       "uuid",
+      "dotenv",
+      "mongoose",
+      "mongoose-sequence",
+      "chalk",
     ]
   },
   "compilerOptions": {
