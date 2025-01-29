@@ -2,12 +2,18 @@ const express = require('express');
 const app = express();
 const path = require('path');
 const { logger } = require('./middleware/logger');
+const errorHandler = require('./middleware/errorHandler');
+const cookieParser = require('cookie-parser');
+const cors = require('cors');
+const corsOptions = require('./config/corsOptions');
 const PORT = process.env.PORT || 3500;
 
 // ? MIDDLEWARES
 app.use(logger);
+app.use(cors(corsOptions));
 app.use(express.json()); // parse json
 app.use(express.urlencoded({ extended: false })); // parse urlencoded
+app.use(cookieParser());
 app.use('/', express.static(path.join(__dirname, 'public'))); // static file
 
 // ? ROUTES
@@ -24,4 +30,5 @@ app.all('*', (req, res) => {
     }
 });
 
+app.use(errorHandler); // ! last middleware so no next() in errorHandler
 app.listen(PORT, () => console.log(`Server is running on port ${PORT}`));
