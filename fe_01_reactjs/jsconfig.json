@@ -1,0 +1,22 @@
+{
+  "typeAcquisition": {
+    "include": [
+      "jest",
+      "redux",
+      "react-redux",
+      "@reduxjs/toolkit",
+      "@reduxjs/toolkit/query",
+      "react-router-dom"
+    ]
+  },
+  "compilerOptions": {
+    "baseUrl": "./",
+    "module": "commonjs",
+    "target": "es6",
+    "jsx": "react",
+    "allowSyntheticDefaultImports": true
+  },
+  "exclude": [
+    "node_modules"
+  ]
+}
