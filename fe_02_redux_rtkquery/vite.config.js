@@ -5,6 +5,7 @@ import react from '@vitejs/plugin-react';
 export default defineConfig({
     plugins: [react()],
     server: {
+        port: 3500,
         hmr: {
             timeout: 30000, // 30 seconds (default is 10 seconds)
             overlay: true, // shows errors on the browser overlay
