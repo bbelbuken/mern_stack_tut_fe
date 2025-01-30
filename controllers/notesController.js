@@ -85,8 +85,8 @@ const deleteNote = asyncHandler(async (req, res) => {
         return res.status(400).json({ message: 'Note not found' });
     }
 
-    const result = await note.deleteOne();
-    const reply = `Note '${result.title}' with ID ${result._id} deleted`;
+    await note.deleteOne();
+    const reply = `Note '${note.title}' with ID '${note._id}' deleted`;
 
     res.json(reply);
 });
