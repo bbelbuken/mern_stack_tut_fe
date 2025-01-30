@@ -29,6 +29,7 @@ app.use('/', express.static(path.join(__dirname, 'public'))); // static file
 // ? ROUTES
 app.use('/', require('./routes/root'));
 app.use('/users', require('./routes/userRoutes'));
+app.use('/notes', require('./routes/notesRoutes'));
 
 app.all('*', (req, res) => {
     res.status(404);
