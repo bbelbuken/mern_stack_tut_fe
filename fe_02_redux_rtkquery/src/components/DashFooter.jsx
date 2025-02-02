@@ -20,6 +20,7 @@ const DashFooter = () => {
             </button>
         );
     }
+
     return (
         <footer className='dash-footer'>
             {goHomeButton}
