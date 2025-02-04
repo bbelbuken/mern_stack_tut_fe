@@ -57,7 +57,7 @@ const EditUserForm = ({ user }) => {
 
     const onActiveChanged = () => setActive((prev) => !prev);
 
-    const onSaveUserClicked = async (e) => {
+    const onSaveUserClicked = async () => {
         if (password) {
             await updateUser({
                 id: user.id,
@@ -78,7 +78,6 @@ const EditUserForm = ({ user }) => {
     const options = Object.values(ROLES).map((role) => {
         return (
             <option key={role} value={role}>
-                {' '}
                 {role}
             </option>
         );
@@ -101,7 +100,7 @@ const EditUserForm = ({ user }) => {
 
     const errContent = (error?.data?.message || delerror?.data?.message) ?? '';
 
-    const content = (
+    return (
         <>
             <p className={errClass}>{errContent}</p>
 
@@ -185,7 +184,5 @@ const EditUserForm = ({ user }) => {
             </form>
         </>
     );
-
-    return content;
 };
 export default EditUserForm;
