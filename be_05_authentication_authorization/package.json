@@ -1,5 +1,5 @@
 {
-  "name": "be_04_controllers",
+  "name": "be_05_authentication_authorization",
   "version": "1.0.0",
   "main": "server.js",
   "scripts": {
