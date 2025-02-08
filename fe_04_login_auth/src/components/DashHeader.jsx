@@ -16,6 +16,7 @@ const DashHeader = () => {
     const [sendLogout, { isLoading, isSuccess, isError, error }] =
         useSendLogoutMutation();
 
+    // ! NOT WORKING AS EXPECTED
     useEffect(() => {
         if (isSuccess) navigate('/');
     }, [isSuccess, navigate]);
@@ -45,10 +46,12 @@ const DashHeader = () => {
                 <Link to='/dash'>
                     <h1 className='dash-header__title'>techNotes</h1>
                 </Link>
-                <nav className='dash-header__nav'>
-                    {/* add more buttons later */}
-                    {logoutButton}
-                </nav>
+                <Link to='/'>
+                    <nav className='dash-header__nav'>
+                        {/* add more buttons later */}
+                        {logoutButton}
+                    </nav>
+                </Link>
             </div>
         </header>
     );
