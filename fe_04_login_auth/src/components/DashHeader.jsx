@@ -39,7 +39,7 @@ const DashHeader = () => {
         </button>
     );
 
-    const content = (
+    return (
         <header className='dash-header'>
             <div className={`dash-header__container ${dashClass}`}>
                 <Link to='/dash'>
@@ -52,7 +52,5 @@ const DashHeader = () => {
             </div>
         </header>
     );
-
-    return content;
 };
 export default DashHeader;
