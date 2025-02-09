@@ -20,9 +20,7 @@ export const authApiSlice = apiSlice.injectEndpoints({
                     const { data } = await queryFulfilled;
                     console.log(data);
                     dispatch(logOut()); // erase local memory
-                    setTimeout(() => {
-                        dispatch(apiSlice.util.resetApiState()); // clear the cache
-                    }, 1000);
+                    dispatch(apiSlice.util.resetApiState()); // clear the cache
                 } catch (err) {
                     console.log(err);
                 }
