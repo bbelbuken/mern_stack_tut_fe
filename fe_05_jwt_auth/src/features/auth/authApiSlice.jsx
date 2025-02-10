@@ -17,8 +17,9 @@ export const authApiSlice = apiSlice.injectEndpoints({
             }),
             async onQueryStarted(arg, { dispatch, queryFulfilled }) {
                 try {
-                    const { data } = await queryFulfilled;
-                    console.log(data);
+                    // const { data } =
+                    await queryFulfilled;
+                    // console.log(data);
                     dispatch(logOut()); // erase local memory
                     dispatch(apiSlice.util.resetApiState()); // clear the cache
                 } catch (err) {
@@ -36,7 +37,7 @@ export const authApiSlice = apiSlice.injectEndpoints({
                     const { data } = await queryFulfilled;
                     console.log(data);
                     const { accessToken } = data;
-                    dispatch(setCredentials(accessToken)); // clear the cache
+                    dispatch(setCredentials(accessToken));
                 } catch (err) {
                     console.log(err);
                 }
