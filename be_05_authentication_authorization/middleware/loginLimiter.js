@@ -2,11 +2,11 @@ const rateLimit = require('express-rate-limit');
 const { logEvents } = require('./logger');
 
 const loginLimiter = rateLimit({
-    windowMs: 60 * 1000, // 1 minute
+    windowMs: 30 * 1000, // 1 minute
     max: 5, // Limit each IP to 5 login requests per `window` per minute
     message: {
         message:
-            'Too many login attempts from this IP, please try again after a 60 second pause',
+            'Too many login attempts from this IP, please try again after a 30 second pause',
     },
     handler: (req, res, next, options) => {
         logEvents(

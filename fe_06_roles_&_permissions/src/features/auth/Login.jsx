@@ -61,7 +61,7 @@ const Login = () => {
 
     if (isLoading) return <p>Loading...</p>;
 
-    return (
+    const content = (
         <section className='public'>
             <header>
                 <h1>Employee Login</h1>
@@ -112,5 +112,7 @@ const Login = () => {
             </footer>
         </section>
     );
+
+    return content;
 };
 export default Login;
