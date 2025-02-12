@@ -1,4 +1,5 @@
 require('dotenv').config();
+require('express-async-errors'); // ! YOU DON'T HAVE TO USE ASYNC HANDLER IF YOU USE THIS
 const express = require('express');
 const app = express();
 const path = require('path');
