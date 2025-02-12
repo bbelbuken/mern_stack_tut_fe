@@ -1,6 +1,6 @@
 import { useRef, useState, useEffect } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
-
+import useTitle from '../../hooks/useTitle';
 import { useDispatch } from 'react-redux';
 import { setCredentials } from './authSlice';
 import { useLoginMutation } from './authApiSlice';
@@ -8,6 +8,7 @@ import { useLoginMutation } from './authApiSlice';
 import usePersist from '../../hooks/usePersist';
 
 const Login = () => {
+    useTitle('Employee Login');
     const userRef = useRef();
     const errRef = useRef();
     const [username, setUsername] = useState('');
