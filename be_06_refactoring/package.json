@@ -1,5 +1,5 @@
 {
-  "name": "be_05_authentication_authorization",
+  "name": "be_06_refactoring",
   "version": "1.0.0",
   "main": "server.js",
   "scripts": {
