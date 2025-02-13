@@ -8,7 +8,7 @@ const User = ({ userId }) => {
     const navigate = useNavigate();
     const { user } = useGetUsersQuery('usersList', {
         selectFromResult: ({ data }) => ({
-            note: data?.entities[userId],
+            user: data?.entities[userId],
         }),
     });
 
